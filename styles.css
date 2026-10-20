@@ -230,7 +230,7 @@ body::before{
 .stack-card h3{font-size:clamp(1.35rem,2.6vw,2.1rem);margin-bottom:.8rem}
 .stack-card p{color:#b8c6c1;max-width:62ch}
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
-.chips span{font-family:var(--mono);font-size:.68rem;border:1px solid var(--line-2);background:rgba(0,230,118,.05);color:#a9bab3;padding:.28rem .6rem;border-radius:999px;transition:color .25s,border-color .25s,transform .25s}
+.chips span{font-family:var(--mono);font-size:.68rem;border:1px solid var(--line-2);background:rgba(0,230,118,.05);color:#b6ff3b;padding:.28rem .6rem;border-radius:999px;transition:color .25s,border-color .25s,transform .25s}
 .chips span:hover{color:var(--green);border-color:var(--green);transform:translateY(-2px)}
 
 /* ==========================================================================
