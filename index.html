@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borja · 1º DAM · IES Simarro</title>
+  <meta name="description" content="Marca personal de Borja, alumno de 1º de DAM en el IES Simarro. Soporte informático, prácticas de docencia, programación e inteligencia artificial.">
+  <meta name="theme-color" content="#05080a">
+
+  <!-- Tipografías: display (Syne), texto (Public Sans) y monoespaciada (JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Capa de grano/ruido sobre toda la web -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Foco de luz verde que sigue al cursor -->
+  <div class="spot" aria-hidden="true"></div>
+
+  <!-- Barra de progreso del scroll -->
+  <div class="scrollbar" aria-hidden="true"><span id="scrollbar-fill"></span></div>
+
+  <!-- ============ NAVEGACIÓN PRINCIPAL ============ -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">B</span>
+      <span class="brand-txt">borja<em>.dev</em></span>
+    </a>
+
+    <!-- Enlaces de sección -->
+    <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+      <a href="#sobre-mi" class="nav-link"><i>01</i>Sobre mí</a>
+      <a href="#hecho" class="nav-link"><i>02</i>Lo que he hecho</a>
+      <a href="#gusta" class="nav-link"><i>03</i>Me gusta</a>
+      <a href="#ia" class="nav-link"><i>04</i>Hacia dónde</a>
+      <a href="#contacto" class="nav-link nav-link--cta"><i>05</i>Contacto</a>
+    </nav>
+
+    <div class="nav-side">
+      <!-- Indicador de disponibilidad -->
+      <span class="status"><i></i>disponible para FCT</span>
+      <!-- Botón de menú en móvil -->
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ CABECERA / PORTADA: nombre + frase ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+
+        <!-- Columna de presentación -->
+        <div class="hero-copy">
+          <p class="eyebrow" data-scramble>1º DAM · IES SIMARRO · PERFIL TÉCNICO</p>
+
+          <!-- Nombre -->
+          <h1 class="hero-name">
+            <span class="line"><span data-scramble>BORJA</span></span>
+            <span class="line hero-name-sub"><span data-scramble>soporte, código y curiosidad</span></span>
+          </h1>
+
+          <!-- Frase de marca -->
+          <p class="hero-phrase reveal">
+            Arreglo lo que se rompe y programo lo que todavía no existe.
+            Ahora mismo aprendiendo <b>Desarrollo de Aplicaciones Multiplataforma</b>
+            y muy pendiente de cómo la <b>IA</b> está cambiando la forma de escribir código.
+          </p>
+
+          <!-- Acciones -->
+          <div class="hero-actions reveal">
+            <a class="btn btn--solid" href="#hecho" data-magnet>Ver lo que he hecho</a>
+            <a class="btn btn--ghost" href="#contacto" data-magnet>Escríbeme</a>
+          </div>
+
+          <!-- Datos rápidos -->
+          <dl class="hero-stats reveal">
+            <div>
+              <dt>Curso</dt>
+              <dd><span data-count="1">0</span>º DAM</dd>
+            </div>
+            <div>
+              <dt>Experiencias</dt>
+              <dd><span data-count="2">0</span></dd>
+            </div>
+            <div>
+              <dt>En clase</dt>
+              <dd><span data-count="6">0</span> asignaturas</dd>
+            </div>
+            <div>
+              <dt>Café / día</dt>
+              <dd><span data-count="3">0</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Consola simulada (portada característica) -->
+        <div class="term reveal" id="term" aria-hidden="true">
+          <div class="term-bar">
+            <span class="dot dot--r"></span><span class="dot dot--a"></span><span class="dot dot--g"></span>
+            <span class="term-title">borja@ies-simarro: ~/perfil</span>
+          </div>
+          <div class="term-body" id="term-body">
+            <p class="t-line" data-cmd="$ quien soy"><span class="out"></span></p>
+            <p class="t-line" data-out>Borja — alumno de 1º de DAM (IES Simarro)</p>
+            <p class="t-line" data-cmd="$ experiencia --list"><span class="out"></span></p>
+            <p class="t-line" data-out">[x] Técnico de informática en un colegio</p>
+            <p class="t-line" data-out>[x] Profesor en prácticas (estudiante en prácticas)</p>
+            <p class="t-line" data-cmd="$ intereses --top"><span class="out"></span></p>
+            <p class="t-line" data-out>programación · inteligencia artificial · videojuegos · amigos</p>
+            <p class="t-line" data-cmd="$ estado"><span class="out"></span></p>
+            <p class="t-line" data-out>buscando centro de prácticas · con ganas de aprender</p>
+            <p class="t-line t-caret" data-out>▊</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cinta de palabras clave en movimiento -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>PYTHON</span><span>JAVA</span><span>SQL</span><span>LINUX</span><span>SOPORTE</span><span>IA GENERATIVA</span><span>VIDEOJUEGOS</span>
+          <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>PYTHON</span><span>JAVA</span><span>SQL</span><span>LINUX</span><span>SOPORTE</span><span>IA GENERATIVA</span><span>VIDEOJUEGOS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN: SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi">
+      <div class="sticky-split">
+
+        <!-- Columna izquierda fija -->
+        <aside class="split-aside">
+          <p class="sec-num" data-scramble>01 / SOBRE MÍ</p>
+          <h2 class="sec-title mask"><span>Quién soy<br>en dos minutos</span></h2>
+
+          <!-- Retrato con efecto Ken Burns -->
+          <figure class="portrait kb reveal">
+            <img src="https://picsum.photos/seed/borja-desarrollador-estudiante/800/1000" alt="Retrato de Borja trabajando en el ordenador" loading="lazy">
+            <figcaption>Estudio DAM, toco teclas y aprendo de cada cosa que se rompe.</figcaption>
+          </figure>
+        </aside>
+
+        <!-- Columna derecha con contenido -->
+        <div class="split-main">
+          <p class="lead reveal">
+            Soy <b>Borja</b>, alumno de <b>1º del ciclo de Desarrollo de Aplicaciones Multiplataforma</b>
+            en el <b>IES Simarro</b>. Vengo del mundo del soporte: antes de sentarme en clase de programación
+            ya había trabajado como <b>técnico de informática en un colegio</b>, así que conozco el lado
+            aburrido de la tecnología (cables, impresoras, usuarios con prisa) y también el bueno:
+            resolver y ver que algo funciona.
+          </p>
+
+          <p class="reveal">
+            Durante el ciclo he hecho prácticas como <b>profesor en prácticas</b>, apoyando como estudiante
+            en prácticas. Explicar código es la mejor forma de entenderlo de verdad: si no sabes decirlo
+            fácil, no lo sabes. Me interesa sobre todo la <b>programación</b> y la nueva ola de
+            <b>inteligencia artificial</b>: no como magia, sino como herramienta que hay que saber usar,
+            auditar y acompañar de criterio.
+          </p>
+
+          <p class="reveal">
+            Fuera de las pantallas, videojuegos y salir con mis amigos. Dentro de ellas, este tipo de web:
+            hecha a mano con HTML, CSS y JavaScript puros, sin frameworks y sin plantillas.
+          </p>
+
+          <!-- Panel de datos -->
+          <div class="info-grid">
+            <article class="info-card reveal">
+              <h3>Formación</h3>
+              <ul class="ticks">
+                <li>1º DAM — IES Simarro <span class="tag tag--live">en curso</span></li>
+                <li>Entornos de desarrollo, programación, bases de datos, LMOO</li>
+                <li>Formación continua sobre IA aplicada al desarrollo</li>
+              </ul>
+            </article>
+            <article class="info-card reveal">
+              <h3>Experiencia</h3>
+              <ul class="ticks">
+                <li>Técnico de informática en centro educativo</li>
+                <li>Apoyo en el aula como estudiante en prácticas</li>
+                <li>Proyectos y prácticas del ciclo</li>
+              </ul>
+            </article>
+            <article class="info-card reveal">
+              <h3>Ahora mismo</h3>
+              <ul class="ticks">
+                <li>Aprendiendo Java y estructuras de datos</li>
+                <li>Probando asistentes de código con IA</li>
+                <li>Buscando plaza de FCT en desarrollo</li>
+              </ul>
+            </article>
+            <article class="info-card reveal">
+              <h3>Cómo trabajo</h3>
+              <ul class="ticks">
+                <li>Primero entiendes el problema, luego tocas teclado</li>
+                <li>Versiono, comento y pruebo lo que hago</li>
+                <li>Preguntar no es perder tiempo, es ganarlo</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN: LO QUE HE HECHO ============ -->
+    <section class="section section--alt" id="hecho">
+      <div class="sec-head">
+        <p class="sec-num" data-scramble>02 / TRAYECTORIA</p>
+        <h2 class="sec-title mask"><span>Lo que he hecho,<br>en orden</span></h2>
+        <p class="sec-note reveal">Tarjetas apiladas: cada paso se queda fijo mientras llega el siguiente.</p>
+      </div>
+
+      <!-- Pila de tarjetas con scroll -->
+      <div class="stack">
+
+        <article class="stack-card" style="--i:0">
+          <div class="sc-meta"><span class="sc-year">2023 – 2024</span><span class="sc-kind">Trabajo</span></div>
+          <h3>Técnico de informática en un colegio</h3>
+          <p>
+            Soporte técnico diario en un centro educativo: mantenimiento de equipos, montaje y puesta a punto
+            de aulas de informática, redes, impresoras, cuentas de alumno y profesor, y recuperación de
+            equipos estropeados antes de que la clase empiece.
+          </p>
+          <ul class="ticks">
+            <li>Revisión e imagen de equipos (Windows / Linux) para aulas completas</li>
+            <li>Soporte a profesorado: proyector, pizarra, acceso, correo, permisos</li>
+            <li>Registro de incidencias y priorización por urgencia real</li>
+          </ul>
+          <div class="chips"><span>Windows</span><span>Linux</span><span>Redes</span><span>Soporte</span><span>Ofimática</span></div>
+        </article>
+
+        <article class="stack-card" style="--i:1">
+          <div class="sc-meta"><span class="sc-year">Prácticas</span><span class="sc-kind">Docencia</span></div>
+          <h3>Profesor en prácticas, como estudiante en prácticas</h3>
+          <p>
+            Apoyo en el aula durante el ciclo: acompañando a grupos, resolviendo dudas de ejercicio uno a uno
+            y preparando material pequeño. Poca experiencia, la suficiente para descubrir que explicar
+            se me da bien y que obliga a dominar el temario.
+          </p>
+          <ul class="ticks">
+            <li>Explicación de ejercicios de programación a compañeros</li>
+            <li>Preparación de enunciados y corrección guiada</li>
+            <li>Control de grupo básico y adaptación del ritmo a quien va perdido</li>
+          </ul>
+          <div class="chips"><span>Python</span><span>Java</span><span>Explicar</span><span>Paciencia</span></div>
+        </article>
+
+        <article class="stack-card" style="--i:2">
+          <div class="sc-meta"><span class="sc-year">Curso actual</span><span class="sc-kind">Formación</span></div>
+          <h3>1º de DAM en el IES Simarro</h3>
+          <p>
+            Desarrollo de Aplicaciones Multiplataforma. Programación, bases de datos, entornos de desarrollo,
+            marcado de documentos y lenguajes de marcas. La parte que más engancha: cuando un programa
+            tuyo deja de ser apuntes y empieza a servir para algo.
+          </p>
+          <ul class="ticks">
+            <li>Programación estructurada y orientada a objetos</li>
+            <li>SQL, modelado de datos y conexión desde aplicaciones</li>
+            <li>Git, entorno de desarrollo y trabajo por entregas</li>
+          </ul>
+          <div class="chips"><span>Java</span><span>Python</span><span>SQL</span><span>Git</span><span>HTML/CSS</span></div>
+        </article>
+
+        <article class="stack-card" style="--i:3">
+          <div class="sc-meta"><span class="sc-year">Personal</span><span class="sc-kind">Proyecto</span></div>
+          <h3>Esta web y otros experimentos</h3>
+          <p>
+            Marca personal hecha desde cero: HTML semántico, CSS puro y JavaScript sin librerías.
+            Además, pequeños scripts de utilidad y pruebas con modelos de IA para generar, revisar
+            y entender código.
+          </p>
+          <ul class="ticks">
+            <li>Diseño propio, sin plantillas ni constructores</li>
+            <li>Accesibilidad básica: semántica, contraste, <code>prefers-reduced-motion</code></li>
+            <li>Prácticas con APIs y asistentes de código</li>
+          </ul>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>IA</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN: ME GUSTA ============ -->
+    <section class="section" id="gusta">
+      <div class="sec-head">
+        <p class="sec-num" data-scramble>03 / ME GUSTA</p>
+        <h2 class="sec-title mask"><span>Lo que me mantiene<br>encendido</span></h2>
+      </div>
+
+      <!-- Rejilla tipo bento, irregular -->
+      <div class="bento">
+
+        <article class="tile tile--a reveal">
+          <div class="kb"><img src="https://picsum.photos/seed/videojuegos-arcade-neon/1000/1200" alt="Consola y mando de videojuegos bajo luz verde" loading="lazy"></div>
+          <div class="tile-body">
+            <h3>Videojuegos</h3>
+            <p>De los que cuentan historias a los que se ganan con amigos. También son la puerta de entrada: quería entender cómo estaban hechos y acabé programando.</p>
+            <div class="chips"><span>Cooperativo</span><span>Mundo abierto</span><span>Retro</span></div>
+          </div>
+        </article>
+
+        <article class="tile tile--b reveal">
+          <div class="kb"><img src="https://picsum.photos/seed/programacion-codigo-editor/900/700" alt="Pantalla con código" loading="lazy"></div>
+          <div class="tile-body">
+            <h3>Programar</h3>
+            <p>La parte adictiva: romper algo, entender por qué se rompió y que funcione mejor.</p>
+          </div>
+        </article>
+
+        <article class="tile tile--c reveal">
+          <div class="kb"><img src="https://picsum.photos/seed/amigos-noche-calle-ciudad/900/700" alt="Grupo de amigos saliendo por la noche" loading="lazy"></div>
+          <div class="tile-body">
+            <h3>Salir con mis amigos</h3>
+            <p>Desconectar en grupo, sin pantallas de por medio. Recarga más que cualquier fin de semana solo.</p>
+          </div>
+        </article>
+
+        <article class="tile tile--d reveal">
+          <div class="tile-body">
+            <h3>La IA, la nueva manera</h3>
+            <p>Me interesa el cambio de paradigma: trabajar con modelos que generan código, texto y datos. No para que lo hagan todo, sino para hacer más en menos tiempo y con mejor calidad.</p>
+            <ul class="bars">
+              <li><span>Prompting y asistentes de código</span><i><b data-val="72"></b></i></li>
+              <li><span>Programación</span><i><b data-val="68"></b></i></li>
+              <li><span>Bases de datos</span><i><b data-val="55"></b></i></li>
+              <li><span>Sistemas y redes</span><i><b data-val="63"></b></i></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tile tile--e reveal">
+          <div class="tile-body">
+            <p class="tile-quote">“Si no lo sabes explicar simple, todavía no lo sabes.”</p>
+            <span class="tile-src">Lo que aprendí dando clase en prácticas</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SECCIÓN: QUÉ QUIERO SER ============ -->
+    <section class="section section--alt" id="ia">
+      <div class="sticky-split">
+        <aside class="split-aside">
+          <p class="sec-num" data-scramble>04 / HACIA DÓNDE</p>
+          <h2 class="sec-title mask"><span>Quiero ser<br>desarrollador con criterio</span></h2>
+          <p class="reveal">
+            Terminar el ciclo, hacer las prácticas en un equipo de desarrollo y seguir formándome en
+            inteligencia artificial aplicada al software: automatizar lo mecánico sin perder de vista
+            lo que hace el código.
+          </p>
+          <div class="kb portrait reveal">
+            <img src="https://picsum.photos/seed/inteligencia-artificial-red-neuronal/900/700" alt="Visualización de una red neuronal" loading="lazy">
+          </div>
+        </aside>
+
+        <!-- Hoja de ruta -->
+        <ol class="road">
+          <li class="reveal">
+            <span class="road-key">Ahora</span>
+            <h3>Aprobar 1º DAM y asentar programación</h3>
+            <p>Java, estructuras de control, colecciones y buenas prácticas. Poco de moda y mucho de fundamento.</p>
+          </li>
+          <li class="reveal">
+            <span class="road-key">2º DAM</span>
+            <h3>Aplicaciones reales y trabajo en equipo</h3>
+            <p>Proyecto intermodular, interfaces, acceso a datos y Git de verdad, no solo como copia de seguridad.</p>
+          </li>
+          <li class="reveal">
+            <span class="road-key">FCT</span>
+            <h3>Prácticas en una empresa de desarrollo</h3>
+            <p>Quiero un equipo con código en producción, revisiones y alguien que me lleve la contraria.</p>
+          </li>
+          <li class="reveal">
+            <span class="road-key">Después</span>
+            <h3>Especializarme en IA aplicada</h3>
+            <p>Integrar modelos en aplicaciones, automatizar procesos y seguir estudiando: esto no para de moverse.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA: CONTACTO ============ -->
+  <footer class="footer" id="contacto">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <p class="sec-num" data-scramble>05 / CONTACTO</p>
+        <h2 class="foot-title mask"><span>Hablemos</span></h2>
+        <p class="reveal">
+          ¿Buscas a alguien para soporte, prácticas o un proyecto de ciclo? Escríbeme y te contesto
+          el mismo día. También si solo quieres hablar de videojuegos.
+        </p>
+
+        <!-- Correo con botón de copiar -->
+        <div class="mail-row reveal">
+          <button class="mail" id="mail-btn" data-mail="borja.dam@correo.example" aria-label="Copiar correo electrónico">
+            <span class="mail-icon" aria-hidden="true">✉</span>
+            <span class="mail-txt">borja.dam@correo.example</span>
+            <span class="mail-hint">copiar</span>
+          </button>
+          <a class="btn btn--solid" href="mailto:borja.dam@correo.example" data-magnet>Enviar correo</a>
+        </div>
+      </div>
+
+      <!-- Enlaces y datos -->
+      <div class="foot-links">
+        <div class="foot-col">
+          <h3>Perfiles</h3>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub<em>repos</em></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn<em>perfil</em></a></li>
+            <li><a href="mailto:borja.dam@correo.example">Correo<em>respuesta rápida</em></a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Formación</h3>
+          <ul>
+            <li><span>IES Simarro</span><em>Palma · Illes Balears</em></li>
+            <li><span>1º DAM</span><em>curso en curso</em></li>
+            <li><span>Modalidad</span><em>presencial</em></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Estado</h3>
+          <ul>
+            <li><span>Disponible</span><em>prácticas FCT</em></li>
+            <li><span>Hora local</span><em id="clock">--:--:--</em></li>
+            <li><span>Idiomas</span><em>ES · CA · EN</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year">2025</span> Borja · marca personal</span>
+      <span class="foot-made">HTML + CSS + JS a mano, sin plantillas</span>
+      <button class="totop" id="totop" aria-label="Volver arriba">↑ arriba</button>
+    </div>
+  </footer>
+
+  <!-- Aviso flotante (copiar correo) -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Correo copiado</div>
+
+  <!-- JavaScript -->
+  <script src="main.js" defer></script>
+</body>
+</html>
