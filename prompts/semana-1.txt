@@ -1,0 +1,4 @@
+# Ordenes clave a la IA · semana 1 (20-oct-2026)
+- "Tutorial: publica tu web y domina GitHub, adaptado a mi repo" -> Pages, .nojekyll, .gitignore, issues, PR y README.
+- "La consola F12 da 404 de favicon.ico, que hago" -> favicon.svg propio y <link rel="icon">.
+- "Como cambio el color de los chips" -> color de .chips span en styles.css.
