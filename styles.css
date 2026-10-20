@@ -434,3 +434,5 @@ body::before{
   .nav-link--cta.is-active{color:var(--acid)}
   .nav-link:last-child{border-bottom:0}
 }
+/* ===== DISEÑO MORADO ===== */
+:root{--green:#a855f7;}
