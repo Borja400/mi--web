@@ -1,0 +1,15 @@
+# --- secretos: nunca se suben a un repo publico ---
+.env
+.env.*
+*.pem
+*.key
+*.token
+# --- si alguna vez usas librerias ---
+node_modules/
+# --- basura del sistema ---
+.DS_Store
+Thumbs.db
+# --- temporales del editor ---
+.vscode/
+*.swp
+*.tmp
