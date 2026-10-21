@@ -1,0 +1,3 @@
+Widget API (tutorial 2)
+- "Dame 3 variantes del widget de GitHub, la presentacion la elijo yo" -> elegi tarjeta.
+- "api.js completo: fetch + try/catch + esqueleto + error amable + recarga 0 + reduced-motion" -> fichero unico.
