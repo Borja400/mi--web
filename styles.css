@@ -436,3 +436,19 @@ body::before{
 }
 /* ===== DISEÑO MORADO ===== */
 :root{--green:#a855f7;}
+/* ===== Widget "Mi GitHub" (api.js) ===== */
+.gh-live{margin-top:2rem;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:1.1rem 1.2rem}
+.gh-live h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim-2);margin:0 0 .8rem}
+.gh-gh{display:flex;align-items:center;gap:.9rem;color:inherit}
+.gh-av{width:56px;height:56px;border-radius:50%;border:1px solid var(--line-2);flex:0 0 auto;object-fit:cover}
+.gh-txt{display:flex;flex-direction:column;gap:.15rem}
+.gh-txt b{font-family:var(--display);font-size:1.1rem}
+.gh-txt span{font-family:var(--mono);font-size:.82rem;color:var(--dim)}
+.gh-gh:hover .gh-txt b{color:var(--green)}
+.gh-err{font-family:var(--mono);font-size:.8rem;color:var(--dim);margin:0}
+.gh-err a{color:var(--green)}
+.is-loading .gh-av,.is-loading .gh-l1,.is-loading .gh-l2{background:var(--panel-2);animation:ghpulse 1.2s ease-in-out infinite}
+.gh-l1{display:block;width:120px;height:12px;border-radius:6px}
+.gh-l2{display:block;width:200px;height:12px;border-radius:6px}
+@keyframes ghpulse{50%{opacity:.4}}
+@media (max-width:520px){.gh-txt span{font-size:.74rem}.gh-live{padding:1rem}.gh-l2{width:150px}}
