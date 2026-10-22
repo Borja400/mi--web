@@ -9,10 +9,10 @@
   <meta name="theme-color" content="#05080a">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Borja · 1º DAM · IES Simarro">
-<meta property="og:description" content="Marca personal de Borja: soporte informático y desarrollo web.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://borja400.github.io/mi--web/">
-<meta property="og:locale" content="es_ES">
+  <meta property="og:description" content="Marca personal de Borja: soporte informático y desarrollo web.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://borja400.github.io/mi--web/">
+  <meta property="og:locale" content="es_ES">
 
   <!-- Tipografías: display (Syne), texto (Public Sans) y monoespaciada (JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,7 +118,7 @@
             <p class="t-line" data-cmd="$ quien soy"><span class="out"></span></p>
             <p class="t-line" data-out>Borja — alumno de 1º de DAM (IES Simarro)</p>
             <p class="t-line" data-cmd="$ experiencia --list"><span class="out"></span></p>
-            <p class="t-line" data-out">[x] Técnico de informática en un colegio</p>
+            <p class="t-line" data-out>[x] Técnico de informática en un colegio</p>
             <p class="t-line" data-out>[x] Profesor en prácticas (estudiante en prácticas)</p>
             <p class="t-line" data-cmd="$ intereses --top"><span class="out"></span></p>
             <p class="t-line" data-out>programación · inteligencia artificial · videojuegos · amigos</p>
@@ -212,7 +212,9 @@
               </ul>
             </article>
           </div>
-                    <div class="gh-live">
+
+          <!-- Widget de datos vivos de GitHub (lo rellena api.js) -->
+          <div class="gh-live">
             <h4>Métricas en vivo · GitHub</h4>
             <div id="mi-github" aria-live="polite">Cargando…</div>
           </div>
@@ -410,12 +412,12 @@
 
         <!-- Correo con botón de copiar -->
         <div class="mail-row reveal">
-          <button class="mail" id="mail-btn" data-mail="borja.dam@correo.example" aria-label="Copiar correo electrónico">
+          <button class="mail" id="mail-btn" data-mail="borhergis@alu.edu.gva.es" aria-label="Copiar correo electrónico">
             <span class="mail-icon" aria-hidden="true">✉</span>
-            <span class="mail-txt">borja.dam@correo.example</span>
+            <span class="mail-txt">borhergis@alu.edu.gva.es</span>
             <span class="mail-hint">copiar</span>
           </button>
-          <a class="btn btn--solid" href="mailto:borja.dam@correo.example" data-magnet>Enviar correo</a>
+          <a class="btn btn--solid" href="mailto:borhergis@alu.edu.gva.es" data-magnet>Enviar correo</a>
         </div>
       </div>
 
@@ -424,17 +426,17 @@
         <div class="foot-col">
           <h3>Perfiles</h3>
           <ul>
-            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub<em>repos</em></a></li>
+            <li><a href="https://github.com/Borja400" target="_blank" rel="noopener">GitHub<em>repos</em></a></li>
             <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn<em>perfil</em></a></li>
-            <li><a href="mailto:borja.dam@correo.example">Correo<em>respuesta rápida</em></a></li>
+            <li><a href="mailto:borhergis@alu.edu.gva.es">Correo<em>respuesta rápida</em></a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h3>Formación</h3>
           <ul>
-            <li><span>IES Simarro</span><em>Palma · Illes Balears</em></li>
+            <li><span>IES Simarro</span><em>Xàtiva · València</em></li>
             <li><span>1º DAM</span><em>curso en curso</em></li>
-            <li><span>Modalidad</span><em>presencial</em></li>
+            <li><span>Modalidad</span><em>semipresencial</em></li>
           </ul>
         </div>
         <div class="foot-col">
@@ -458,11 +460,9 @@
   <!-- Aviso flotante (copiar correo) -->
   <div class="toast" id="toast" role="status" aria-live="polite">Correo copiado</div>
 
-  <!-- JavaScript -->
-  <script src="main.js" defer></script>
-    <!-- JavaScript -->
+  <!-- JavaScript: cada script UNA sola vez -->
   <script src="main.js" defer></script>
   <script src="api.js" defer></script>
-</body>
+  <script src="chatbot.js" defer></script>
 </body>
 </html>
